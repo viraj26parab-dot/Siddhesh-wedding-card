@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सिद्धेश ❤️ विद्या विवाह</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background: linear-gradient(135deg, #4b0000, #800000);
+    color: #ffe8c6;
+    overflow-x: hidden;
+}
+
+/* ENTRY */
+#entry {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b0000, #800000);
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#entry h1 {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 0 15px gold;
+}
+
+#entry button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 2px solid gold;
+    background: transparent;
+    color: gold;
+    cursor: pointer;
+}
+
+#entry button:hover {
+    background: gold;
+    color: #4b0000;
+}
+
+/* MAIN */
+.container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(75, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 420px;
+    margin: auto;
+    border: 2px solid gold;
+    box-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+
+/* HEADINGS */
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+/* NAMES */
+.names {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #ffd700;
+    text-shadow: 0 0 12px gold;
+    margin: 15px 0;
+}
+
+/* TEXT */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: 2px solid gold;
+    background: transparent;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: gold;
+    color: #4b0000;
+    box-shadow: 0 0 15px gold;
+}
+
+/* COUNTDOWN */
+.countdown {
+    color: #ffd700;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* GALLERY */
+.gallery img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin: 10px;
+    border: 2px solid gold;
+    box-shadow: 0 0 12px rgba(255,215,0,0.5);
+}
+
+/* SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FLOWERS */
+.flower {
+    position: fixed;
+    top: -50px;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+/* SPARKLE */
+.sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: gold;
+    border-radius: 50%;
+    animation: sparkle 2s infinite;
+}
+@keyframes sparkle {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENTRY -->
+<div id="entry">
+    <h1>💍 Wedding Invitation 💍</h1>
+    <p>सिद्धेश ❤️ विद्या</p>
+    <button onclick="enterSite()">Enter</button>
+</div>
+
+<!-- MAIN -->
+<div class="container" id="main">
+
+<div class="card fade">
+    <h2>🪔 शुभ विवाह सोहळा 🪔</h2>
+
+    <div class="names">सिद्धेश ❤️ विद्या</div>
+
+    <hr style="border:none;height:2px;background:gold;width:60%;margin:15px auto;box-shadow:0 0 10px gold;">
+
+    <p>📅 १ मे २०२६</p>
+    <p>🕒 सकाळी ११:४६</p>
+
+    <p>
+        📍 वासुदेवानंद सभागृह,<br>
+        उदयमनगर, कुडाळ,<br>
+        जि. सिंधुदुर्ग
+    </p>
+
+    <div class="countdown" id="countdown"></div>
+
+    <a class="btn" href="https://maps.app.goo.gl/2oJrLBQwBrBKzqK59">📍 नकाशा</a>
+    <a class="btn" href="https://wa.me/918275792752">📩 RSVP</a>
+</div>
+
+<h3 class="fade">🎥 आमचा खास व्हिडिओ</h3>
+<video class="fade" width="90%" controls>
+    <source src="v1.mp4" type="video/mp4">
+</video>
+
+<h3 class="fade">📸 फोटो गॅलरी</h3>
+<div class="gallery fade">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+</div>
+
+</div>
+
+<audio id="music" loop>
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav">
+</audio>
+
+<script>
+function enterSite() {
+    document.getElementById("entry").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    document.getElementById("music").play();
+    flowers();
+    sparkles();
+}
+
+// COUNTDOWN
+const date = new Date("May 1, 2026 11:46:00").getTime();
+setInterval(()=>{
+    let now = new Date().getTime();
+    let d = date - now;
+    let days = Math.floor(d/(1000*60*60*24));
+    document.getElementById("countdown").innerHTML = "⏳ " + days + " दिवस बाकी";
+},1000);
+
+// FLOWERS
+function flowers(){
+    for(let i=0;i<20;i++){
+        let f=document.createElement("div");
+        f.className="flower";
+        f.innerHTML="🌸";
+        f.style.left=Math.random()*100+"vw";
+        f.style.animationDuration=(5+Math.random()*5)+"s";
+        document.body.appendChild(f);
+    }
+}
+
+// SPARKLES
+function sparkles(){
+    for(let i=0;i<30;i++){
+        let s=document.createElement("div");
+        s.className="sparkle";
+        s.style.left=Math.random()*100+"vw";
+        s.style.top=Math.random()*100+"vh";
+        document.body.appendChild(s);
+    }
+}
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.fade').forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
